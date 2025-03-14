@@ -5,12 +5,12 @@ MMDEBSTRAP_SUITE ?= stable
 
 MMDEBSTRAP_FLAGS += --aptopt='Acquire::Languages { "environment"; "en"; }'
 MMDEBSTRAP_FLAGS += --dpkgopt='path-exclude=/usr/share/man/*' \
-										--dpkgopt='path-include=/usr/share/man/man[1-9]/*' \
-										--dpkgopt='path-exclude=/usr/share/locale/*' \
-										--dpkgopt='path-include=/usr/share/locale/locale.alias' \
-										--dpkgopt='path-exclude=/usr/share/doc/*' \
-										--dpkgopt='path-include=/usr/share/doc/*/copyright' \
-										--dpkgopt='path-include=/usr/share/doc/*/changelog.Debian.*'
+	--dpkgopt='path-include=/usr/share/man/man[1-9]/*' \
+	--dpkgopt='path-exclude=/usr/share/locale/*' \
+	--dpkgopt='path-include=/usr/share/locale/locale.alias' \
+	--dpkgopt='path-exclude=/usr/share/doc/*' \
+	--dpkgopt='path-include=/usr/share/doc/*/copyright' \
+	--dpkgopt='path-include=/usr/share/doc/*/changelog.Debian.*'
 
 build:
 	mkdir -p $@
